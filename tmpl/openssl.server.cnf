@@ -1,0 +1,19 @@
+[ req ]
+req_extensions = req_ext
+distinguished_name = dn
+
+[ dn ]
+
+[ req_ext ]
+
+[ alt_names ]
+DNS.1 = {HOST_CLUSTER}
+DNS.2 = localhost
+IP.1 = {HOST_CLUSTER_IP}
+IP.2 = 127.0.0.1
+IP.3 = 0:0:0:0:0:0:0:1
+
+[ v3_ext ]
+keyUsage=critical,keyEncipherment,digitalSignature
+extendedKeyUsage=serverAuth,clientAuth
+subjectAltName=@alt_names
