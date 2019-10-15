@@ -1,0 +1,25 @@
+[ req ]
+req_extensions = req_ext
+distinguished_name = dn
+
+[ dn ]
+
+[ req_ext ]
+subjectAltName = @alt_names
+
+[ alt_names ]
+DNS.1 = {HOST_CLUSTER}
+DNS.2 = kubernetes
+DNS.3 = kubernetes.default
+DNS.4 = kubernetes.default.svc
+DNS.5 = kubernetes.default.svc.cluster
+DNS.6 = kubernetes.default.svc.cluster.local
+IP.1 = {HOST_NETWORK}
+IP.2 = {HOST_CLUSTER_IP}
+IP.3 = {HOST_CLUSTER_PUBLIC}
+
+[ v3_ext ]
+keyUsage=critical,keyEncipherment,digitalSignature
+extendedKeyUsage=serverAuth
+subjectAltName=@alt_names
+

@@ -1,0 +1,13 @@
+[ req ]
+req_extensions = req_ext
+distinguished_name = dn
+
+[ dn ]
+
+[ req_ext ]
+
+[ alt_names ]
+
+[ v3_ext ]
+keyUsage=critical,keyEncipherment,keyCertSign,digitalSignature
+basicConstraints=critical,CA:TRUE
